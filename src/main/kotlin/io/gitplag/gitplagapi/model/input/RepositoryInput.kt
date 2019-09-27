@@ -9,9 +9,9 @@ data class RepositoryInput(
     val id: Long,
     val git: GitProperty,
     val name: String,
-    var language: Language,
-    var filePatterns: Collection<String>?,
-    var analyzer: AnalyzerProperty?,
-    var analysisMode: AnalysisMode?,
-    var autoCloningEnabled: Boolean?
+    val language: Language,
+    val filePatterns: Collection<String> = emptyList(),
+    val analyzer: AnalyzerProperty? = null,
+    val analysisMode: AnalysisMode? = null,
+    val autoCloningEnabled: Boolean? = null
 )
