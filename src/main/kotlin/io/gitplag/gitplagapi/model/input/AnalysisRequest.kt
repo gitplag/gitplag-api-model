@@ -5,12 +5,12 @@ import io.gitplag.gitplagapi.model.enums.AnalyzerProperty
 import io.gitplag.gitplagapi.model.enums.Language
 
 data class AnalysisRequest(
-        val branch: String,
-        val analyzer: AnalyzerProperty?,
-        val language: Language?,
-        val mode: AnalysisMode?,
-        val maxResultSize: Int?,
-        val minResultPercentage: Int?,
-        val responseUrl: String?,
-        val updateFiles: Boolean = false
+    val branch: String,
+    val analyzer: AnalyzerProperty?,
+    val language: Language?,
+    val mode: AnalysisMode?,
+    val maxResultSize: Int?,
+    val minResultPercentage: Int?,
+    val responseUrl: String?,
+    val updateFiles: Boolean = false
 )

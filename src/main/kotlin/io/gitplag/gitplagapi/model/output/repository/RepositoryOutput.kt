@@ -6,12 +6,12 @@ import io.gitplag.gitplagapi.model.enums.GitProperty
 import io.gitplag.gitplagapi.model.enums.Language
 
 data class RepositoryOutput(
-        val id: Long,
-        val filePatterns: Collection<String>,
-        val name: String,
-        val analyzer: AnalyzerProperty,
-        val gitService: GitProperty,
-        val language: Language,
-        val analysisMode: AnalysisMode,
-        val autoCloningEnabled: Boolean
+    val id: Long,
+    val filePatterns: Collection<String>,
+    val name: String,
+    val analyzer: AnalyzerProperty,
+    val gitService: GitProperty,
+    val language: Language,
+    val analysisMode: AnalysisMode,
+    val autoCloningEnabled: Boolean
 )
