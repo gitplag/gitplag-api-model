@@ -12,5 +12,6 @@ data class AnalysisRequest(
     val maxResultSize: Int? = null,
     val minResultPercentage: Int? = null,
     val responseUrl: String? = null,
-    val updateFiles: Boolean = false
+    val updateFiles: Boolean = false,
+    val additionalRepositories: Collection<Long>? = emptyList()
 )

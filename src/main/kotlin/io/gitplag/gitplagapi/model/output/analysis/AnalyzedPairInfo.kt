@@ -2,7 +2,9 @@ package io.gitplag.gitplagapi.model.output.analysis
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize
+import com.fasterxml.jackson.databind.annotation.JsonSerialize
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer
 import java.time.LocalDateTime
 
 data class AnalyzedPairInfo(
@@ -19,9 +21,11 @@ data class AnalyzedPairInfo(
     @JsonProperty(value = "maxPercentage", required = true)
     val maxPercentage: Int,
     @JsonProperty(value = "createdAt1", required = true)
+    @JsonSerialize(using = LocalDateTimeSerializer::class)
     @JsonDeserialize(using = LocalDateTimeDeserializer::class)
     val createdAt1: LocalDateTime,
     @JsonProperty(value = "createdAt2", required = true)
+    @JsonSerialize(using = LocalDateTimeSerializer::class)
     @JsonDeserialize(using = LocalDateTimeDeserializer::class)
     val createdAt2: LocalDateTime
 )

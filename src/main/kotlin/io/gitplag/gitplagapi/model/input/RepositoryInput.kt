@@ -6,7 +6,7 @@ import io.gitplag.gitplagapi.model.enums.GitProperty
 import io.gitplag.gitplagapi.model.enums.Language
 
 data class RepositoryInput(
-    val id: Long,
+    val id: Long? = null,
     val git: GitProperty,
     val name: String,
     val language: Language,

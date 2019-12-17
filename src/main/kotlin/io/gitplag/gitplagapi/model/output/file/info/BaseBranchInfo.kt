@@ -9,5 +9,5 @@ data class BaseBranchInfo(
     @JsonProperty(value = "updated", required = true)
     val updated: LocalDateTime,
     @JsonProperty(value = "files", required = true)
-    val files: List<FileInfo>
+    val files: Collection<FileInfo>
 )
