@@ -3,16 +3,11 @@ package io.gitplag.gitplagapi.model.input
 import com.fasterxml.jackson.annotation.JsonProperty
 import io.gitplag.gitplagapi.model.enums.AnalysisMode
 import io.gitplag.gitplagapi.model.enums.AnalyzerProperty
-import io.gitplag.gitplagapi.model.enums.GitProperty
 import io.gitplag.gitplagapi.model.enums.Language
 
-data class RepositoryInput(
-    @JsonProperty(value = "git", required = true)
-    val git: GitProperty,
-    @JsonProperty(value = "name", required = true)
-    val name: String,
-    @JsonProperty(value = "language", required = true)
-    val language: Language,
+data class RepositoryUpdate(
+    @JsonProperty(value = "language", required = false)
+    val language: Language? = null,
     @JsonProperty(value = "filePatterns", required = false)
     val filePatterns: Collection<String> = emptyList(),
     @JsonProperty(value = "analyzer", required = false)
