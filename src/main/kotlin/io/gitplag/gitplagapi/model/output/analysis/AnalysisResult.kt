@@ -26,5 +26,7 @@ data class AnalysisResult(
     @JsonProperty(value = "resultLink", required = true)
     val resultLink: String,
     @JsonProperty(value = "analysisPairs", required = true)
-    val analysisPairs: List<AnalyzedPairInfo>
+    val analysisPairs: List<AnalyzedPairInfo>,
+    @JsonProperty(value = "studentsWithoutSolutions", required = true)
+    val studentsWithoutSolutions: String
 )
