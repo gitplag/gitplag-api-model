@@ -1,7 +1,9 @@
 package io.gitplag.gitplagapi.model.output.analysis.pair
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class AnalyzedPairMatch(
     @JsonProperty(value = "id", required = true)
     val id: Long,

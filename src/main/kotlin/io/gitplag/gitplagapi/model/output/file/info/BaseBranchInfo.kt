@@ -1,8 +1,10 @@
 package io.gitplag.gitplagapi.model.output.file.info
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 import java.time.LocalDateTime
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class BaseBranchInfo(
     @JsonProperty(value = "branch", required = true)
     val branch: String,

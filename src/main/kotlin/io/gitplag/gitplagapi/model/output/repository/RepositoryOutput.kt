@@ -1,11 +1,13 @@
 package io.gitplag.gitplagapi.model.output.repository
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 import io.gitplag.gitplagapi.model.enums.AnalysisMode
 import io.gitplag.gitplagapi.model.enums.AnalyzerProperty
 import io.gitplag.gitplagapi.model.enums.GitProperty
 import io.gitplag.gitplagapi.model.enums.Language
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class RepositoryOutput(
     @JsonProperty(value = "id", required = true)
     val id: Long,

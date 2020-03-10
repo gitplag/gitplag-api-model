@@ -1,7 +1,9 @@
 package io.gitplag.gitplagapi.model.output.pullrequest
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class PullRequest(
     @JsonProperty(value = "id", required = true)
     val id: Long,

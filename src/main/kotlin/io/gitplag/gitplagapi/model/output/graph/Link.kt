@@ -1,10 +1,12 @@
 package io.gitplag.model.data.graph
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
  * Graph arrow
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class Link(
     @JsonProperty(value = "first", required = true)
     val first: String,
